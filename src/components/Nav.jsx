@@ -40,7 +40,7 @@ const Nav = ({whichLanguage, isEnglish}) => {
 					<div className="img-div">
 						<img src={logo} className="logo" alt="" />
 					</div>
-					{isEnglish ? <h2>713-992-9303</h2> : <h2>713-259-3755</h2>}
+					{isEnglish ? <a className='number' href='tel:555-555-5555'>713-992-9303</a> : <a className='number' href='tel:555-555-5555'>713-259-3755</a>}
 
 					<div className="icon-container">
 						{isEnglish ? (
