@@ -1,10 +1,24 @@
 import React from 'react'
-
+import logo from '../Assets/logo.PNG'
 const Footer = () => {
   return (
-    <footer>
-      
-    </footer>  )
+		<footer>
+			<div className="container">
+				<div className="row">
+					<div className="links_wrapper"></div>
+					<div className="footer__wrapper">
+						<div className="footer__logo">
+              <img src={logo} className="footer__logo--img" alt="" />
+              <h4 className='footer__logo--name'>Eddie Baca Inc.</h4>
+						</div>
+						<p class="footer__copyright">
+							&copy; 2018 Eddie Baca Inc. All Rights Reserved.
+						</p>
+					</div>
+				</div>
+			</div>
+		</footer>
+  );
 }
 
 export default Footer

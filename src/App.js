@@ -1,9 +1,9 @@
 import { useState } from 'react';
-import './App.css';
 import Footer from './components/Footer';
 import Gallery from './components/Gallery';
 import Landing from './components/Landing';
 import Nav from './components/Nav';
+import Services from './components/Services';
 
 function App() {
   const [isEnglish, setIsEnglish] = useState(true);
@@ -15,7 +15,8 @@ function App() {
   return (
     <div className="App">
       <Nav whichLanguage={whichLanguage} isEnglish={isEnglish} />
-      <Landing />
+      <Landing isEnglish={isEnglish} />
+      <Services isEnglish={isEnglish} />
       <Gallery />
       <Footer/>
 
