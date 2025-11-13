@@ -3,8 +3,9 @@ import { useWindowScroll } from 'react-use';
 import gsap from 'gsap';
 import logo from '../Assets/logo.PNG';
 import { RiMenu2Line } from 'react-icons/ri';
+import { FaPhoneAlt } from 'react-icons/fa';
 
-const Nav = ({whichLanguage, isEnglish}) => {
+const Nav = ({ whichLanguage, isEnglish }) => {
 	const navContainerRef = useRef(null);
 	const [lastScrollY, setLastScrollY] = useState(0);
 	const [isNavVisible, setIsNavVisible] = useState(true);
@@ -30,8 +31,7 @@ const Nav = ({whichLanguage, isEnglish}) => {
 			opacity: isNavVisible ? 1 : 0,
 			duration: 0.2,
 		});
-    }, [isNavVisible]);
-    
+	}, [isNavVisible]);
 
 	return (
 		<div ref={navContainerRef} className="nav-Container">
@@ -40,7 +40,21 @@ const Nav = ({whichLanguage, isEnglish}) => {
 					<div className="img-div">
 						<img src={logo} className="logo" alt="" />
 					</div>
-					{isEnglish ? <a className='number' href='tel:555-555-5555'>713-992-9303</a> : <a className='number' href='tel:555-555-5555'>713-259-3755</a>}
+					{isEnglish ? (
+						<div className="number--wrapper">
+							<FaPhoneAlt />
+							<a className="number" href="tel:555-555-5555">
+								713-992-9303
+							</a>
+						</div>
+					) : (
+						<div className="number--wrapper">
+							<FaPhoneAlt />
+							<a className="number" href="tel:555-555-5555">
+								713-259-3755
+							</a>
+						</div>
+					)}
 
 					<div className="icon-container">
 						{isEnglish ? (

@@ -1,12 +1,9 @@
-import React from 'react';
-import ImgRes from '..//Assets/gallery7.JPG';
-import ComRes from '..//Assets/gallery5.JPG';
-const Gallery = ({ isEnglish }) => {
-	return (
-		<section id="gallery">
-			
-		</section>
-	);
-};
+import React from 'react'
 
-export default Gallery;
+const Gallery = () => {
+  return (
+    <div>Gallery</div>
+  )
+}
+
+export default Gallery

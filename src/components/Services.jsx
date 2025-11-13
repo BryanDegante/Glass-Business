@@ -10,13 +10,13 @@ const Services = ({ isEnglish }) => {
 				<div className="row">
 					<header className="section__header">
 						{isEnglish ? (
-							<h1 className="section__title blue-text">
-								Services
-							</h1>
+							<h4 className="section__title blue-text">
+								SERVICES
+							</h4>
 						) : (
-							<h1 className="section__title blue-text">
-								Servicios
-							</h1>
+							<h4 className="section__title blue-text">
+								SERVICOS
+							</h4>
 						)}
 					</header>
 					<div className="Residential-container">
@@ -26,10 +26,10 @@ const Services = ({ isEnglish }) => {
 						<div className="sub-headers__container">
 							{isEnglish ? (
 								<div className="sub-headers">
-									<h1 className="sub-header blue-text">
+									<h1 className="sub__header--title blue-text">
 										Residential Glass
 									</h1>
-									<h3>
+									<h3 className='section__header'>
 										Expert Residential Glass Solutions for
 										Every Home
 									</h3>
@@ -46,7 +46,7 @@ const Services = ({ isEnglish }) => {
 								</div>
 							) : (
 								<div className="sub-headers">
-									<h1 className="sub-header blue-text">
+									<h1 className="sub__header--title blue-text">
 										Vidrio Residencial
 									</h1>
 									<p>
@@ -68,10 +68,10 @@ const Services = ({ isEnglish }) => {
 						<div className="sub-headers__container">
 							{isEnglish ? (
 								<div className="sub-headers">
-									<h1 className="sub-header blue-text">
+									<h1 className="sub__header--title blue-text">
 										Commercial Glass
 									</h1>
-									<h3>
+									<h3 className='section__header'>
 										Glass Solutions That Elevate Your
 										Business
 									</h3>
@@ -88,7 +88,7 @@ const Services = ({ isEnglish }) => {
 								</div>
 							) : (
 								<div className="sub-headers">
-									<h1 className="sub-header blue-text">
+									<h1 className="sub__header--title blue-text">
 										Vidrio Comercial
 									</h1>
 									<p>
@@ -116,7 +116,7 @@ const Services = ({ isEnglish }) => {
 						<div className="sub-headers__container">
 							{isEnglish ? (
 								<div className="sub-headers">
-									<h1 className="sub-header blue-text">
+									<h1 className="sub__header--title blue-text">
 										Repair & Replacement
 									</h1>
 									<p>
@@ -131,7 +131,7 @@ const Services = ({ isEnglish }) => {
 								</div>
 							) : (
 								<div className="sub-headers">
-									<h1 className="sub-header blue-text">
+									<h1 className="sub__header--title blue-text">
 										Reparación y Reemplazo
 									</h1>
 									<p>

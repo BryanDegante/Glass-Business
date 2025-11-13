@@ -9,17 +9,17 @@ const Landing = ({ isEnglish }) => {
 						<h1>
 							Expert Glass Installation for Homes & Businesses
 						</h1>
-						<h2>
+						<h3>
 							Crystal-clear quality. Precision craftsmanship.
 							Installed on time—every time.
-						</h2>
+						</h3>
 					</div>
 					<div className="description bottom-right">
 						<h1>
 							From custom shower enclosures to storefront windows,
 							we deliver flawless glass solutions built to last.
 						</h1>
-						<h2>In the Houston Area</h2>
+						<h3>In the Houston Area</h3>
 					</div>
 				</div>
 			) : (
