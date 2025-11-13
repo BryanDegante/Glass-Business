@@ -7,7 +7,7 @@ const Services = ({ isEnglish }) => {
 	return (
 		<section id="services">
 			<div className="container">
-				<div className="row">
+				<div className="row services__row">
 					<header className="section__header">
 						{isEnglish ? (
 							<h4 className="section__title blue-text">
@@ -19,9 +19,13 @@ const Services = ({ isEnglish }) => {
 							</h4>
 						)}
 					</header>
-					<div className="Residential-container">
-						<div className="img__container">
-							<img className="res__img" src={ImgRes} alt="" />
+					<div className="service__container">
+						<div className="img__container left__img">
+							<img
+								className="res__img "
+								src={ImgRes}
+								alt=""
+							/>
 						</div>
 						<div className="sub-headers__container">
 							{isEnglish ? (
@@ -29,7 +33,7 @@ const Services = ({ isEnglish }) => {
 									<h1 className="sub__header--title blue-text">
 										Residential Glass
 									</h1>
-									<h3 className='section__header'>
+									<h3 className="section__header">
 										Expert Residential Glass Solutions for
 										Every Home
 									</h3>
@@ -64,14 +68,14 @@ const Services = ({ isEnglish }) => {
 							)}
 						</div>
 					</div>
-					<div className="Commercial-container">
+					<div className="service__container">
 						<div className="sub-headers__container">
 							{isEnglish ? (
 								<div className="sub-headers">
 									<h1 className="sub__header--title blue-text">
 										Commercial Glass
 									</h1>
-									<h3 className='section__header'>
+									<h3 className="section__header">
 										Glass Solutions That Elevate Your
 										Business
 									</h3>
@@ -105,13 +109,17 @@ const Services = ({ isEnglish }) => {
 								</div>
 							)}
 						</div>
-						<div className="img__container">
-							<img className="com__img" src={ImgCom} alt="" />
+						<div className="img__container right__img">
+							<img
+								className="com__img "
+								src={ImgCom}
+								alt=""
+							/>
 						</div>
 					</div>
-					<div className="Residential-container">
-						<div className="img__container">
-							<img className="res__img" src={ImgRep} alt="" />
+					<div className="service__container">
+						<div className="img__container left__img">
+							<img className="res__img " src={ImgRep} alt="" />
 						</div>
 						<div className="sub-headers__container">
 							{isEnglish ? (

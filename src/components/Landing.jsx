@@ -6,7 +6,7 @@ const Landing = ({ isEnglish }) => {
 			{isEnglish ? (
 				<div className="description__wrapper">
 					<div className="description top-left">
-						<h1>
+						<h1 className='description__top--text'>
 							Expert Glass Installation for Homes & Businesses
 						</h1>
 						<h3>
@@ -15,11 +15,11 @@ const Landing = ({ isEnglish }) => {
 						</h3>
 					</div>
 					<div className="description bottom-right">
-						<h1>
+						<h2 className='description__top--text'>In the Houston Area</h2>
+						<h3 >
 							From custom shower enclosures to storefront windows,
 							we deliver flawless glass solutions built to last.
-						</h1>
-						<h3>In the Houston Area</h3>
+						</h3>
 					</div>
 				</div>
 			) : (

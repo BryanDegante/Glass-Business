@@ -6,7 +6,7 @@ const Features = ({ isEnglish }) => {
 	return (
 		<section id="features">
 			<div className="container">
-				<div className="row features__row">
+				<div className="row ">
 					<div className="features__description--heading">
 						<header className="section__header">
 							{isEnglish ? (

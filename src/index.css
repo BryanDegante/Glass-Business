@@ -196,6 +196,17 @@ nav {
 
 .description {
   color: white;
+  backdrop-filter: hue-rotate(-0.25turn);
+  border: 3px solid rgb(0, 132, 255);
+  padding: 24px 16px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.description__top--text{
+  padding-bottom: 16px;
 }
 
 .top-left {
@@ -260,6 +271,9 @@ nav {
 
 /* SERVICES */
 
+.services__row{
+  max-width: 1440px;
+}
 
 .section__header {
   display: flex;
@@ -268,11 +282,11 @@ nav {
   letter-spacing: 2px;
 }
 
-.Residential-container,
-.Commercial-container {
+.service__container {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 56px 0; 
 }
 
 .img__container {
@@ -292,6 +306,14 @@ nav {
   width: 100%;
   clip-path: polygon(30% 0%, 100% 0%, 100% 100%, 30% 100%, 0% 50%);
   border-radius: 8%;
+}
+
+.left__img{
+  padding-right: 24px;
+}
+
+.right__img{
+  padding-left: 24px;
 }
 
 .sub-headers {
@@ -342,4 +364,5 @@ footer {
 
 .footer__copyright {
   font-size: 18px;
+  color: white;
 }
