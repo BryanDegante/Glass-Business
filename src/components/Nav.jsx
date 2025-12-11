@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { useWindowScroll } from 'react-use';
 import gsap from 'gsap';
-import logo from '../Assets/logo.PNG';
+import logo from '../Assets/logo2.png';
 import { RiMenu2Line } from 'react-icons/ri';
 import { FaPhoneAlt } from 'react-icons/fa';
 
@@ -59,14 +59,14 @@ const Nav = ({ whichLanguage, isEnglish }) => {
 					<div className="icon-container">
 						{isEnglish ? (
 							<button
-								className="nav__list language__button"
+								className="nav__list button"
 								onClick={() => whichLanguage(false)}
 							>
 								Español
 							</button>
 						) : (
 							<button
-								className="nav__list language__button"
+								className="nav__list button"
 								onClick={() => whichLanguage(true)}
 							>
 								English
