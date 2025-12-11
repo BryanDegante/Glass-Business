@@ -40,19 +40,21 @@ const GalleryPage = ({ images }) => {
 	return (
 		<section id="gallery__grid">
 			<div className="container">
-        <div className="row">
-          <div className='gallery__title blue-text'>
-            <h1>Gallery</h1>
-          </div>
+				<div className="row">
+					<div className="gallery__title blue-text">
+						<h1>Gallery</h1>
+					</div>
 					<div className="gallery-grid">
 						{images.map((image, index) => (
-							<img
-								key={image.id}
-								src={image.src}
-								alt={image.alt}
-								className="gallery-image"
-								onClick={(e) => openLightbox(index, e)}
-							/>
+							<div className="image__container">
+								<img
+									key={image.id}
+									src={image.src}
+									alt={image.alt}
+									className="gallery-image"
+									onClick={(e) => openLightbox(index, e)}
+								/>
+							</div>
 						))}
 					</div>
 
