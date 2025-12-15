@@ -38,7 +38,15 @@ const Gallery = ({ isEnglish }) => {
 								onClick={() => navigate('/galleryPage')}
 								className="view__button button blue-text"
 							>
-								<span className='button__text'>View more</span>
+								{isEnglish ? (
+									<span className="button__text">
+										View more
+									</span>
+								) : (
+									<span className="button__text">
+										Ver más
+									</span>
+								)}
 								<FaArrowCircleRight />
 							</button>
 						</div>

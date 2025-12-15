@@ -12,8 +12,8 @@ const Footer = () => {
               <h3 className='footer__logo--name'>Eddie Baca Inc.</h3>
 						</div>
 						<p class="footer__copyright">
-							&copy; 2018 Eddie Baca Inc. All Rights Reserved.
-						</p>
+						  Copyright &copy; 2018 Eddie Baca Inc. All Rights Reserved.
+					  </p>
 					</div>
 				</div>
 			</div>
