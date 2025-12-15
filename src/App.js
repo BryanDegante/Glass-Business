@@ -4,7 +4,9 @@ import Nav from './components/Nav';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import GalleryPage from './Pages/GalleryPage';
 import Home from './Pages/Home';
+
 import {images} from './data'
+import ScrollToTop from './components/ScrollToTop';
 
 function App() {
   const [isEnglish, setIsEnglish] = useState(true);
@@ -15,6 +17,7 @@ function App() {
 
   return (
     <Router >
+      <ScrollToTop />
       <div className="App">
         <Nav whichLanguage={whichLanguage} isEnglish={isEnglish} />
         <Routes>

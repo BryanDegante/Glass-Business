@@ -41,9 +41,9 @@ const Nav = ({ whichLanguage, isEnglish }) => {
 						<img src={logo} className="logo" alt="" />
 					</div>
 					{isEnglish ? (
-						<div className="number--wrapper">
+						<div className="number--wrapper ">
 							<FaPhoneAlt />
-							<a className="number" href="tel:555-555-5555">
+							<a className="number " href="tel:555-555-5555">
 								713-992-9303
 							</a>
 						</div>

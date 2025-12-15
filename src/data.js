@@ -71,4 +71,8 @@ export const images = [
         id: 18,
         src: require('./Assets/gallery18.JPG')
     },
+    {
+        id: 19,
+        src: require('./Assets/gallery19.JPG')
+    },
 ];

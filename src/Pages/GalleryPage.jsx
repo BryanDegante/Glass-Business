@@ -1,5 +1,6 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef, useState} from 'react';
 import gsap from 'gsap';
+
 const GalleryPage = ({ images }) => {
 	const [isOpen, setIsOpen] = useState(false);
 	const [currentIndex, setCurrentIndex] = useState(0);
@@ -12,6 +13,8 @@ const GalleryPage = ({ images }) => {
 		setCurrentIndex(index);
 		setIsOpen(true);
 	};
+
+	window.scrollTo(0, 0);
 
 	useEffect(() => {
 		if (isOpen && lightboxImgRef.current) {

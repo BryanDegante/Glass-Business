@@ -6,7 +6,7 @@ const Landing = ({ isEnglish }) => {
 			{isEnglish ? (
 				<div className="description__wrapper">
 					<div className="description top-left">
-						<h1 className='description__top--text'>
+						<h1 className="description__top--text">
 							Expert Glass Installation for Homes & Businesses
 						</h1>
 						<h3>
@@ -15,8 +15,10 @@ const Landing = ({ isEnglish }) => {
 						</h3>
 					</div>
 					<div className="description bottom-right">
-						<h2 className='description__top--text'>In the Houston Area</h2>
-						<h3 >
+						<h2 className="description__top--text">
+							In the Houston Area
+						</h2>
+						<h3>
 							From custom shower enclosures to storefront windows,
 							we deliver flawless glass solutions built to last.
 						</h3>
@@ -29,18 +31,18 @@ const Landing = ({ isEnglish }) => {
 							Instalación Profesional de Vidrio para Hogares y
 							Negocios
 						</h1>
-						<h2>
-							Calidad impecable. Mano de obra precisa.
-							Instalaciones a tiempo, siempre.
-						</h2>
+						<h3>
+							Calidad impecable. Fabricación de precisión.
+							Instalación puntual, siempre.
+						</h3>
 					</div>
 					<div className="description bottom-right">
-						<h1>
-							Desde canceles de baño a medida hasta fachadas
-							comerciales, ofrecemos soluciones en vidrio
-							duraderas y con acabados de primera.
-						</h1>
 						<h2>En el área de Houston</h2>
+						<h3>
+							Desde recintos de ducha personalizados hasta
+							ventanas de tiendas, entregamos soluciones de vidrio
+							perfectas construidas para durar.
+						</h3>
 					</div>
 				</div>
 			)}

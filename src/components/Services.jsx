@@ -21,11 +21,7 @@ const Services = ({ isEnglish }) => {
 					</header>
 					<div className="service__container">
 						<div className="img__container left__img">
-							<img
-								className="res__img "
-								src={ImgRes}
-								alt=""
-							/>
+							<img className="res__img " src={ImgRes} alt="" />
 						</div>
 						<div className="sub-headers__container">
 							{isEnglish ? (
@@ -53,6 +49,10 @@ const Services = ({ isEnglish }) => {
 									<h1 className="sub__header--title blue-text">
 										Vidrio Residencial
 									</h1>
+									<h3 className="section__header">
+										Soluciones expertas en cristalería
+										residencial para cada hogar.
+									</h3>
 									<p>
 										nos especializamos en soluciones de
 										vidrio residencial de alta calidad que
@@ -95,6 +95,10 @@ const Services = ({ isEnglish }) => {
 									<h1 className="sub__header--title blue-text">
 										Vidrio Comercial
 									</h1>
+									<h3 className="section__header">
+										Soluciones de vidrio que impulsan su
+										negocio
+									</h3>
 									<p>
 										Llevamos claridad, estilo y rendimiento
 										a cada proyecto comercial. Nuestras
@@ -110,11 +114,7 @@ const Services = ({ isEnglish }) => {
 							)}
 						</div>
 						<div className="img__container right__img">
-							<img
-								className="com__img "
-								src={ImgCom}
-								alt=""
-							/>
+							<img className="com__img " src={ImgCom} alt="" />
 						</div>
 					</div>
 					<div className="service__container">
@@ -127,6 +127,10 @@ const Services = ({ isEnglish }) => {
 									<h1 className="sub__header--title blue-text">
 										Repair & Replacement
 									</h1>
+									<h3 className="section__header">
+										Seamless solutions to get your space
+										back to normal.
+									</h3>
 									<p>
 										Broken or damaged glass doesn't have to
 										disrupt your day. Our expert repair and
@@ -142,6 +146,10 @@ const Services = ({ isEnglish }) => {
 									<h1 className="sub__header--title blue-text">
 										Reparación y Reemplazo
 									</h1>
+									<h3 className="section__header">
+										Soluciones sin solidez para que tu
+										espacio vuelva a la normalidad.
+									</h3>
 									<p>
 										El vidrio roto o dañado no tiene por qué
 										interrumpir tu día. Nuestros servicios
