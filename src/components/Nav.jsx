@@ -43,18 +43,27 @@ const Nav = ({ whichLanguage, isEnglish }) => {
 					{isEnglish ? (
 						<div className="number--wrapper ">
 							<FaPhoneAlt />
-							<a className="number " href="tel:555-555-5555">
+							<a className="number " href="tel:+7139929303">
 								713-992-9303
 							</a>
 						</div>
 					) : (
 						<div className="number--wrapper">
 							<FaPhoneAlt />
-							<a className="number" href="tel:555-555-5555">
+							<a className="number" href="tel:+17132593755">
 								713-259-3755
 							</a>
 						</div>
 					)}
+
+					<ul className='nav__list'> 
+						<li>
+							<a href="">Home</a>
+						</li>
+						<li>
+							<a href="">Gallery</a>
+						</li>
+					</ul>
 
 					<div className="icon-container">
 						{isEnglish ? (
@@ -72,9 +81,7 @@ const Nav = ({ whichLanguage, isEnglish }) => {
 								English
 							</button>
 						)}
-						<button className="nav__list menu__button">
-							<RiMenu2Line />
-						</button>
+						
 					</div>
 				</nav>
 			</div>

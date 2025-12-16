@@ -22,7 +22,7 @@ function App() {
         <Nav whichLanguage={whichLanguage} isEnglish={isEnglish} />
         <Routes>
           <Route path='/' element={<Home isEnglish={isEnglish} />}></Route>
-          <Route path='/galleryPage' element={<GalleryPage images={images} />}></Route>
+          <Route path='/galleryPage' element={<GalleryPage images={images} isEnglish={isEnglish}/>}></Route>
         </Routes>
         <Footer />
       </div>

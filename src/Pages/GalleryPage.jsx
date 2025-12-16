@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState} from 'react';
 import gsap from 'gsap';
 
-const GalleryPage = ({ images }) => {
+const GalleryPage = ({ images, isEnglish }) => {
 	const [isOpen, setIsOpen] = useState(false);
 	const [currentIndex, setCurrentIndex] = useState(0);
 	const [clickedImageRect, setClickedImageRect] = useState(null);
@@ -45,7 +45,11 @@ const GalleryPage = ({ images }) => {
 			<div className="container">
 				<div className="row">
 					<div className="gallery__title blue-text">
-						<h1>Gallery</h1>
+						{isEnglish ?
+							<h1>Gallery</h1>
+							: <h1>Galleria</h1>
+						
+					}
 					</div>
 					<div className="gallery-grid">
 						{images.map((image, index) => (
