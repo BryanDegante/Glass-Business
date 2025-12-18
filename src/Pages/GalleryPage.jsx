@@ -4,17 +4,13 @@ import gsap from 'gsap';
 const GalleryPage = ({ images, isEnglish }) => {
 	const [isOpen, setIsOpen] = useState(false);
 	const [currentIndex, setCurrentIndex] = useState(0);
-	const [clickedImageRect, setClickedImageRect] = useState(null);
 	const lightboxImgRef = useRef(null);
 
 	const openLightbox = (index, e) => {
-		const rect = e.target.getBoundingClientRect(); // get thumbnail position
-		setClickedImageRect(rect);
 		setCurrentIndex(index);
 		setIsOpen(true);
 	};
 
-	window.scrollTo(0, 0);
 
 	useEffect(() => {
 		if (isOpen && lightboxImgRef.current) {
@@ -41,7 +37,7 @@ const GalleryPage = ({ images, isEnglish }) => {
 		setCurrentIndex((currentIndex - 1 + images.length) % images.length);
 
 	return (
-		<section id="gallery__grid">
+		<section id="images">
 			<div className="container">
 				<div className="row">
 					<div className="gallery__title blue-text">

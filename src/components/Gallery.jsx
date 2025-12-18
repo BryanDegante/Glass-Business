@@ -4,6 +4,8 @@ import Img2 from '../Assets/gallery2.JPG';
 import Img5 from '../Assets/gallery5.PNG';
 import { FaArrowCircleRight } from 'react-icons/fa';
 import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import { HashLink } from 'react-router-hash-link';
 const Gallery = ({ isEnglish }) => {
 	let navigate = useNavigate();
 	return (
@@ -34,10 +36,10 @@ const Gallery = ({ isEnglish }) => {
 							</figure>
 						</div>
 						<div className="arrow__container">
+							<HashLink to="/GalleryPage#images">
 							<button
-								onClick={() => navigate('/galleryPage')}
 								className="view__button button blue-text"
-							>
+								>
 								{isEnglish ? (
 									<span className="button__text">
 										View more
@@ -49,6 +51,7 @@ const Gallery = ({ isEnglish }) => {
 								)}
 								<FaArrowCircleRight />
 							</button>
+								</HashLink>
 						</div>
 					</div>
 				</div>

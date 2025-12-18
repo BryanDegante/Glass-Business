@@ -4,6 +4,7 @@ import gsap from "gsap";
 import logo from "../Assets/logo2.png";
 import { RiMenu2Line } from "react-icons/ri";
 import { FaPhoneAlt } from "react-icons/fa";
+import { HashLink } from "react-router-hash-link";
 
 const Nav = ({ whichLanguage, isEnglish }) => {
   const navContainerRef = useRef(null);
@@ -34,64 +35,102 @@ const Nav = ({ whichLanguage, isEnglish }) => {
   }, [isNavVisible]);
 
   return (
-    <div ref={navContainerRef} className="nav-Container">
-      <div className="nav-header">
-        <nav>
-          <div className="img-div">
-            <img src={logo} className="logo" alt="" />
-          </div>
-          {isEnglish ? (
-            <div className="number--wrapper ">
-              <FaPhoneAlt />
-              <a className="number " href="tel:+7139929303">
-                713-992-9303
-              </a>
-            </div>
-          ) : (
-            <div className="number--wrapper">
-              <FaPhoneAlt />
-              <a className="number" href="tel:+17132593755">
-                713-259-3755
-              </a>
-            </div>
-          )}
+		<div ref={navContainerRef} className="nav-Container">
+			<div className="nav-header">
+				<nav>
+					<div className="img-div">
+						<img src={logo} className="logo" alt="" />
+					</div>
+					
 
-          {isEnglish ? (
-            <ul className="nav__list">
-              <li>
-                <a href="/" className="nav__link link__hover--effect">Home</a>
-              </li>
-              <li >
-                <a href="/galleryPage" className="nav__link link__hover--effect">Gallery</a>
-              </li>
-			   <button
-                className="menu__button button"
-                onClick={() => whichLanguage(false)}
-              >
-                Español
-              </button>
-            </ul>
-          ) : (
-            <ul className="nav__list">
-              <li>
-                <a href="/">Inicial</a>
-              </li>
-              <li>
-                <a href="/galleryPage">Galleria</a>
-              </li>
-			   <button
-                className="menu__button button"
-                onClick={() => whichLanguage(false)}
-              >
-                Español
-              </button>
-            </ul>
-          )}
-
-          
-        </nav>
-      </div>
-    </div>
+					{isEnglish ? (
+						<ul className="nav__list">
+							<li>
+								<HashLink
+									to="/#landing"
+									className="nav__link link__hover--effect"
+								>
+									Home
+								</HashLink>
+							</li>
+							<li>
+								<HashLink
+									to="/#features"
+									className="nav__link link__hover--effect"
+									smooth
+								>
+									Features
+								</HashLink>
+							</li>
+							<li>
+								<HashLink
+									to="/#services"
+									className="nav__link link__hover--effect"
+								>
+									Services
+								</HashLink>
+							</li>
+							<li>
+								<HashLink
+									to="/#gallery"
+									className="nav__link link__hover--effect"
+								>
+									Gallery
+								</HashLink>
+							</li>
+							<button
+								className="menu__button button"
+								onClick={() => whichLanguage(false)}
+							>
+								Español
+							</button>
+						</ul>
+					) : (
+						<ul className="nav__list">
+							<li>
+								<HashLink
+									to="/#landing"
+									className="nav__link link__hover--effect"
+								>
+									Incial
+								</HashLink>
+							</li>
+							<li>
+								<HashLink
+									to="/#features"
+									className="nav__link link__hover--effect"
+									smooth
+								>
+									Características
+								</HashLink>
+							</li>
+							<li>
+								<HashLink
+									to="/#services"
+									className="nav__link link__hover--effect"
+								>
+									Servicios
+								</HashLink>
+							</li>
+							<li>
+								<HashLink
+									to="/#gallery"
+									className="nav__link link__hover--effect"
+								>
+									Galleria
+								</HashLink>
+							</li>
+							<button
+								className="menu__button button"
+								onClick={() => whichLanguage(true)}
+							>
+								English
+							</button>
+						</ul>
+					)}
+				</nav>
+			</div>
+		</div>
   );
 };
 

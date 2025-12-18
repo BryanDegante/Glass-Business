@@ -6,7 +6,7 @@ import Gallery from '../components/Gallery';
 
 const Home = ({isEnglish}) => {
   return (
-		<div>
+		<div id='Home'>
 			<Landing isEnglish={isEnglish} />
 			<Features isEnglish={isEnglish} />
 			<Services isEnglish={isEnglish} />

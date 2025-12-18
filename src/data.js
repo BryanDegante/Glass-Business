@@ -9,7 +9,7 @@ export const images = [
     },
     {
         id: 3, 
-        src: require('./Assets/gallery3.JPG')
+        src: require('./Assets/gallery3.jpg')
     },
     {
         id: 4, 
