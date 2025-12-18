@@ -52,6 +52,7 @@ button {
   border: 3px solid rgb(0, 132, 255);
   border-radius: 16px;
   padding: 8px;
+  font-weight: 700;
 }
 
 button:hover {
@@ -98,6 +99,11 @@ h4 {
   font-size: 16px;
 }
 
+ul{
+  display: flex;
+  align-items: center;
+}
+
 a{
   text-decoration: none;
 }
@@ -105,6 +111,27 @@ a{
 li{
   list-style-type: none;
 }
+
+.link__hover--effect {
+    position: relative;
+}
+
+.link__hover--effect:after {
+    content: "";
+    position: absolute;
+    bottom: -3px;
+    height: 3px;
+    width: 0;
+    right: 0;
+    background-color: #fff;
+    transition: all 300ms ease;
+}
+
+.link__hover--effect:hover:after {
+    left: 0;
+    width: 100%;
+}
+
 /* NAV */
 
 .nav-Container {
@@ -155,11 +182,10 @@ nav {
   font-size: 16px;
 }
 
-.menu__button {
-  font-size: 24px;
-  background-color: transparent;
-  border: none;
+.nav__link{
   color: white;
+  margin-right: 24px;
+  font-weight: 700;
 }
 
 .img-div {
@@ -571,11 +597,37 @@ footer {
   .service__container{
     flex-direction: column;
   }
-
-  .res__img{
-    clip-path: polygon(100% 0, 100% 75%, 50% 100%, 0 75%, 0 0);
-
+  .reverse{
+    flex-direction: column-reverse;
   }
+
+  .res__img,.com__img{
+    clip-path: polygon(100% 0, 100% 75%, 50% 100%, 0 75%, 0 0);
+  }
+
+  .right__img{
+    padding: 0;
+  }
+
+  .left__img{
+    padding: 0;
+  }
+
+  .img__container{
+    width: 100%;
+    height: 100%;
+    margin-bottom: 16px;
+  }
+
+  .sub-headers__container{
+    width: 100%;
+  }
+
+  .home__gallery--img{
+    height: 300px;
+    width: 200px;
+  }
+  
 }
 @media (max-width: 550px) {
 }

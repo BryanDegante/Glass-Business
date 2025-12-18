@@ -68,7 +68,7 @@ const Services = ({ isEnglish }) => {
 							)}
 						</div>
 					</div>
-					<div className="service__container">
+					<div className="service__container reverse">
 						<div className="sub-headers__container">
 							{isEnglish ? (
 								<div className="sub-headers">
@@ -147,8 +147,7 @@ const Services = ({ isEnglish }) => {
 										Reparación y Reemplazo
 									</h1>
 									<h3 className="section__header">
-										Soluciones sin solidez para que tu
-										espacio vuelva a la normalidad.
+										Soluciones profesionales para que tu espacio vuelva a la normalidad.
 									</h3>
 									<p>
 										El vidrio roto o dañado no tiene por qué

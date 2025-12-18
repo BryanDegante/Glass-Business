@@ -4,7 +4,7 @@ import {
 	FaCheck,
 	FaHammer,
 	FaHardHat,
-	FaPencilRuler,
+	FaPencilAlt,
 } from 'react-icons/fa';
 import { FaHandHoldingHand } from 'react-icons/fa6';
 
@@ -56,7 +56,7 @@ const Features = ({ isEnglish }) => {
 						</div>
 						<div className="features__description">
 							<div className="features__description--icon blue-text">
-								<FaPencilRuler />
+								<FaPencilAlt />
 							</div>
 							{isEnglish ? (
 								<div className="features__description--text">
