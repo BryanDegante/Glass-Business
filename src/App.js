@@ -45,17 +45,27 @@ function App() {
     <Router >
       <div className="App">
         <Nav whichLanguage={whichLanguage} isEnglish={isEnglish} />
-        <a href="tel:+7139929303">
+        {isEnglish ? (
+          
+        <a href="tel:+17139929303">
 
           <button className='call__button'>
             <FaPhoneAlt className='phone__icon' />
           </button>
-        </a>
+        </a>):
+       ( <a href="tel:+17132593755">
+
+          <button className='call__button'>
+            <FaPhoneAlt className='phone__icon' />
+          </button>
+        </a>)
+
+      }
         <Routes>
           <Route path='/' exact element={<Home isEnglish={isEnglish} />}></Route>
           <Route path='/GalleryPage'exact element={<GalleryPage images={images} isEnglish={isEnglish} />}></Route>
         </Routes>
-        <Footer />
+        <Footer isEnglish={isEnglish} />
       </div>
     </Router>
   );

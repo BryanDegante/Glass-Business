@@ -2,8 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import { useWindowScroll } from "react-use";
 import gsap from "gsap";
 import logo from "../Assets/logo2.png";
-import { RiMenu2Line } from "react-icons/ri";
-import { FaPhoneAlt } from "react-icons/fa";
+import { CiMenuFries } from 'react-icons/ci';
 import { HashLink } from "react-router-hash-link";
 
 const Nav = ({ whichLanguage, isEnglish }) => {
@@ -45,7 +44,7 @@ const Nav = ({ whichLanguage, isEnglish }) => {
 
 					{isEnglish ? (
 						<ul className="nav__list">
-							<li>
+							<li className="nav__links">
 								<HashLink
 									to="/#landing"
 									className="nav__link link__hover--effect"
@@ -53,7 +52,7 @@ const Nav = ({ whichLanguage, isEnglish }) => {
 									Home
 								</HashLink>
 							</li>
-							<li>
+							<li className="nav__links">
 								<HashLink
 									to="/#features"
 									className="nav__link link__hover--effect"
@@ -62,7 +61,7 @@ const Nav = ({ whichLanguage, isEnglish }) => {
 									Features
 								</HashLink>
 							</li>
-							<li>
+							<li className="nav__links">
 								<HashLink
 									to="/#services"
 									className="nav__link link__hover--effect"
@@ -70,16 +69,9 @@ const Nav = ({ whichLanguage, isEnglish }) => {
 									Services
 								</HashLink>
 							</li>
-							<li>
-								<HashLink
-									to="/#gallery"
-									className="nav__link link__hover--effect"
-								>
-									Gallery
-								</HashLink>
-							</li>
+							
 							<button
-								className="menu__button button"
+								className=" button"
 								onClick={() => whichLanguage(false)}
 							>
 								Español
@@ -87,7 +79,7 @@ const Nav = ({ whichLanguage, isEnglish }) => {
 						</ul>
 					) : (
 						<ul className="nav__list">
-							<li>
+							<li className="nav__links">
 								<HashLink
 									to="/#landing"
 									className="nav__link link__hover--effect"
@@ -95,7 +87,7 @@ const Nav = ({ whichLanguage, isEnglish }) => {
 									Incial
 								</HashLink>
 							</li>
-							<li>
+							<li className="nav__links">
 								<HashLink
 									to="/#features"
 									className="nav__link link__hover--effect"
@@ -104,7 +96,7 @@ const Nav = ({ whichLanguage, isEnglish }) => {
 									Características
 								</HashLink>
 							</li>
-							<li>
+							<li className="nav__links">
 								<HashLink
 									to="/#services"
 									className="nav__link link__hover--effect"
@@ -112,7 +104,7 @@ const Nav = ({ whichLanguage, isEnglish }) => {
 									Servicios
 								</HashLink>
 							</li>
-							<li>
+							<li className="nav__links">
 								<HashLink
 									to="/#gallery"
 									className="nav__link link__hover--effect"
@@ -120,14 +112,17 @@ const Nav = ({ whichLanguage, isEnglish }) => {
 									Galleria
 								</HashLink>
 							</li>
+							
 							<button
-								className="menu__button button"
+								className="button"
 								onClick={() => whichLanguage(true)}
 							>
 								English
 							</button>
+							
 						</ul>
-					)}
+				  )}
+				  
 				</nav>
 			</div>
 		</div>
