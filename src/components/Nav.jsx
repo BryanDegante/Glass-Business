@@ -76,6 +76,10 @@ const Nav = ({ whichLanguage, isEnglish }) => {
 							>
 								Español
 							</button>
+							<button className ="menu__button"
+								>
+								<CiMenuFries className ="menu__button" />
+							</button>
 						</ul>
 					) : (
 						<ul className="nav__list">
@@ -118,6 +122,9 @@ const Nav = ({ whichLanguage, isEnglish }) => {
 								onClick={() => whichLanguage(true)}
 							>
 								English
+							</button>
+							<button className ="menu__button">
+								<CiMenuFries  />
 							</button>
 							
 						</ul>
