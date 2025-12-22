@@ -66,7 +66,7 @@ button:active {
   position: fixed;
   bottom: 32px;
   left: 10px;
-  z-index: 100;
+  z-index: 9999;
   box-shadow: 0 12px 30px 0 rgb(0, 0, 0, 0.2);
 }
 
@@ -209,7 +209,7 @@ nav {
   height: 60px;
 }
 
-.menu__button{
+.menu__button {
   background-color: transparent;
   font-size: 24px;
   color: rgb(0, 132, 255);
@@ -219,58 +219,64 @@ nav {
   display: none;
 }
 
-.menu__button:hover{
+.menu__button:hover {
   color: #fff
 }
 
-.menu-backdrop {
+.menu__backdrop {
   position: fixed;
   inset: 0;
-  background: rgba(0, 0, 0, 0.55);
-  backdrop-filter: blur(4px);
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   opacity: 0;
+  visibility: hidden;
   pointer-events: none;
-  transition: opacity 0.3s ease;
-  z-index: 20;
+  background-color: rgba(0, 0, 0, 0.6);
+  transition: opacity 200ms ease, visibility 200ms ease;
 }
 
-.menu-backdrop.open {
+.menu__backdrop.menu__visible {
   opacity: 1;
+  visibility: visible;
   pointer-events: auto;
 }
 
-.mobile-menu{
-   position: fixed;
-  top: 0;
-  right: -280px;
-  width: 280px;
-  height: 100%;
-  background: #fff;
-  padding: 2rem;
+.menu__inner {
+  background-color: #0f1720;
+  color: #fff;
+  padding: 48px 32px;
+  border-radius: 12px;
+  max-width: 560px;
+  width: 90%;
+  z-index: 9999;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+  position: relative;
+}
+
+.choices {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
-  transition: right 0.3s ease;
-  z-index: 21;
+  align-items: center;
 }
 
-
-.mobile-menu.open {
-  right: 0;
-}
-
-.mobile-menu a {
-  font-size: 1.2rem;
-  text-decoration: none;
-  color: #000;
-}
-
-.close-menu {
-  align-self: flex-end;
-  font-size: 1.5rem;
-  background: none;
-  border: none;
+.menu__close {
+  position: absolute;
+  right: 20px;
+  top: 10px;
+  z-index: 40;
+  font-size: 36px;
+  color: #ffffff;
+  background-color: transparent;
   cursor: pointer;
+  border: none;
+  transition: all 300ms ease;
+}
+
+.menu__link {
+  color: white;
+  margin: 16px 0;
 }
 
 /* LANDING */
@@ -614,19 +620,19 @@ footer {
   height: 100px;
 }
 
-.contact__wrapper{
+.contact__wrapper {
   display: flex;
   align-items: center;
   flex-direction: column;
 }
 
-.numbers{
+.numbers {
   display: flex;
   flex-direction: column;
   margin-left: 16px;
 }
 
-.num{
+.num {
   color: white;
 }
 
@@ -740,32 +746,32 @@ footer {
     margin: 16px 0;
   }
 
-  .footer__wrapper{
+  .footer__wrapper {
     flex-direction: column;
   }
 
-  .contact__wrapper{
+  .contact__wrapper {
     padding: 36px 0;
   }
 
-  .num{
+  .num {
     padding: 8px 0;
   }
 
-  .nav__links{
+  .nav__links {
     display: none;
   }
 
-  .call__button{
+  .call__button {
     height: 50px;
     width: 50px;
   }
 
-  .phone__icon{
-   font-size: 20px; 
+  .phone__icon {
+    font-size: 20px;
   }
 
-  .menu__button{
+  .menu__button {
     display: block;
   }
 

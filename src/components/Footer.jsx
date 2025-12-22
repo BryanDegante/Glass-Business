@@ -30,7 +30,7 @@ const Footer = ({isEnglish}) => {
 							</div>
 						)}
 					</div>
-					<p class="footer__copyright">
+					<p className="footer__copyright">
 						Copyright &copy; 2025 Eddie Baca Inc. All Rights
 						Reserved.
 					</p>

@@ -14,7 +14,6 @@ import { CustomWiggle } from 'gsap/CustomWiggle'
 
 function App() {
   const [isEnglish, setIsEnglish] = useState(true);
-
   function whichLanguage(elm) {
     setIsEnglish(elm)
   }
@@ -41,29 +40,33 @@ function App() {
 
   }, [])
 
+  
+
+
   return (
     <Router >
       <div className="App">
         <Nav whichLanguage={whichLanguage} isEnglish={isEnglish} />
         {isEnglish ? (
-          
-        <a href="tel:+17139929303">
 
-          <button className='call__button'>
-            <FaPhoneAlt className='phone__icon' />
-          </button>
-        </a>):
-       ( <a href="tel:+17132593755">
+          <a href="tel:+17139929303">
 
-          <button className='call__button'>
-            <FaPhoneAlt className='phone__icon' />
-          </button>
-        </a>)
+            <button className='call__button'>
+              <FaPhoneAlt className='phone__icon' />
+            </button>
+          </a>) :
+          (<a href="tel:+17132593755">
 
-      }
+            <button className='call__button'>
+              <FaPhoneAlt className='phone__icon' />
+            </button>
+          </a>)
+
+        }
+      
         <Routes>
           <Route path='/' exact element={<Home isEnglish={isEnglish} />}></Route>
-          <Route path='/GalleryPage'exact element={<GalleryPage images={images} isEnglish={isEnglish} />}></Route>
+          <Route path='/GalleryPage' exact element={<GalleryPage images={images} isEnglish={isEnglish} />}></Route>
         </Routes>
         <Footer isEnglish={isEnglish} />
       </div>
