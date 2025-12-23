@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState} from 'react';
 import gsap from 'gsap';
+import { useGSAP } from '@gsap/react';
 
 const GalleryPage = ({ images, isEnglish }) => {
 	const [isOpen, setIsOpen] = useState(false);
@@ -11,8 +12,15 @@ const GalleryPage = ({ images, isEnglish }) => {
 		setIsOpen(true);
 	};
 
-
-	useEffect(() => {
+	useGSAP(() => {
+		gsap.fromTo('.image__container', {
+			opacity: 0
+		}, {
+			opacity: 1,
+			stagger: 0.5
+		})
+	},[isEnglish])
+	useGSAP(() => {
 		if (isOpen && lightboxImgRef.current) {
 			const img = lightboxImgRef.current;
 
@@ -29,6 +37,11 @@ const GalleryPage = ({ images, isEnglish }) => {
 		}
 	}, [isOpen]);
 
+	 useEffect(() => {
+			document.body.classList.add('page--gallery');
+			return () => document.body.classList.remove('page--gallery');
+		}, []);
+
 	const closeLightbox = () => setIsOpen(false);
 
 	const nextImage = () => setCurrentIndex((currentIndex + 1) % images.length);
@@ -37,15 +50,11 @@ const GalleryPage = ({ images, isEnglish }) => {
 		setCurrentIndex((currentIndex - 1 + images.length) % images.length);
 
 	return (
-		<section id="images">
+		<section id="images" className="gallery-page">
 			<div className="container">
 				<div className="row">
 					<div className="gallery__title blue-text">
-						{isEnglish ?
-							<h1>Gallery</h1>
-							: <h1>Galleria</h1>
-						
-					}
+						{isEnglish ? <h1>Gallery</h1> : <h1>Galleria</h1>}
 					</div>
 					<div className="gallery-grid">
 						{images.map((image, index) => (

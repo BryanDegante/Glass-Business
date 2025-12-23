@@ -1,6 +1,34 @@
+import { useGSAP } from '@gsap/react';
 import React from 'react';
+import gsap from 'gsap';
+
 
 const Landing = ({ isEnglish }) => {
+	const titleAnimation = gsap.timeline();
+	
+	useGSAP(() => {
+		titleAnimation
+			.fromTo('nav',
+				{ y: '-20%', opacity: 0 },
+				{ y: '0%', opacity: 1, duration: 1, ease: 'power3.out' }
+			)
+
+			.fromTo(
+				'.top-left',
+				{ x: '-20%', opacity: 0 },
+				{ x: '0%', opacity: 1, duration: 1, ease: 'power3.out' },'-=0.5'
+			)
+			.fromTo(
+				'.bottom-right',
+				{ x: '+20%', opacity: 0 },
+				{ x: '0%', opacity: 1, duration: 1, ease: 'power3.out' },'-=0.5'
+			)
+			.fromTo(
+				'.call__button',
+				{ scale: 0},
+				{scale:1 },'-=0.5'
+			);
+	}, [isEnglish])
 	return (
 		<section id="landing" className="bg-lightblue">
 			{isEnglish ? (

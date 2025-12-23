@@ -195,6 +195,8 @@ nav {
 
 .nav__link {
   color: white;
+    text-shadow: 0 4px 8px rgb(0, 0, 0);
+      transition: color 200ms ease;
   margin-right: 24px;
   font-weight: 700;
 }
@@ -244,7 +246,7 @@ nav {
 }
 
 .menu__inner {
-  background-color: #0f1720;
+  background-color: #234061;
   color: #fff;
   padding: 48px 32px;
   border-radius: 12px;
@@ -455,7 +457,7 @@ nav {
   overflow: hidden;
   padding: 8px;
   box-shadow: 0 8px 15px rgb(153, 152, 152);
-  transition: transform 0.3s, box-shadow 0.3s;
+  transition: all ease 300ms
 }
 
 .home__gallery--img:hover {
@@ -489,6 +491,8 @@ nav {
 /* GALLERY PAGE */
 
 /* Grid Gallery */
+
+
 
 .gallery__title {
   display: flex;

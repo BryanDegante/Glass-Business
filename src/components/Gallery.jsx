@@ -3,11 +3,34 @@ import Img1 from '../Assets/gallery1.JPG';
 import Img2 from '../Assets/gallery2.JPG';
 import Img5 from '../Assets/gallery5.PNG';
 import { FaArrowCircleRight } from 'react-icons/fa';
-import { useNavigate } from 'react-router-dom';
-import { Link } from 'react-router-dom';
 import { HashLink } from 'react-router-hash-link';
+import { useGSAP } from '@gsap/react';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/all';
+gsap.registerPlugin(ScrollTrigger);
 const Gallery = ({ isEnglish }) => {
-	let navigate = useNavigate();
+	useGSAP(() => {
+		const featuresAnimation = gsap.timeline({
+			scrollTrigger: {
+				trigger: '#gallery',
+				start: 'top 85%',
+				end: 'bottom 80%',
+				toggleActions: 'play none none none',
+			},
+		});
+		featuresAnimation.fromTo(
+			'.home__gallery--img',
+			{
+				y: '-50%',
+				opacity: 0,
+			},
+			{
+				y: '0%',
+				stagger: 0.5,
+				opacity: 1,
+			}
+		);
+	}, [isEnglish]);
 	return (
 		<section id="gallery">
 			<div className="container">

@@ -1,3 +1,5 @@
+import { useGSAP } from '@gsap/react';
+import { ScrollTrigger } from 'gsap/all';
 import React from 'react';
 import {
 	FaCalendar,
@@ -6,9 +8,34 @@ import {
 	FaHardHat,
 	FaPencilAlt,
 } from 'react-icons/fa';
-import { FaHandHoldingHand } from 'react-icons/fa6';
+import { FaHandHoldingHand } from 'react-icons/fa6'; 
+import gsap from 'gsap';
+gsap.registerPlugin(ScrollTrigger);
 
 const Features = ({ isEnglish }) => {
+	useGSAP(() => {
+		const featuresAnimation = gsap.timeline({
+			scrollTrigger: {
+				trigger: '#features__animation',
+				start: 'top 95%',
+				end: 'bottom 80%',
+				toggleActions: 'play none none none',
+			},
+		});
+		featuresAnimation.fromTo(
+			'.features__description',
+			{
+				y: '-50%',
+				opacity: 0,
+			},
+			{
+				y: '0%',
+				stagger: 0.5,
+				opacity: 1,
+			}
+		);
+		
+	},[isEnglish])
 	return (
 		<section id="features">
 			<div className="container">
@@ -31,7 +58,7 @@ const Features = ({ isEnglish }) => {
 							<h2>¿Por qué elegirnos?</h2>
 						)}
 					</div>
-					<div className="features__descriptions">
+					<div className="features__descriptions" id='features__animation'>
 						<div className="features__description">
 							<div className="features__description--icon blue-text">
 								<FaHardHat />

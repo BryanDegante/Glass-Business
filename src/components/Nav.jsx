@@ -38,7 +38,6 @@ const Nav = ({ whichLanguage, isEnglish, openMenu }) => {
 		});
 	}, [isNavVisible]);
 
-	// control portal mount state so we can animate out before unmounting
 	useEffect(() => {
 		if (menuOpen) {
 			setMenuMounted(true);
@@ -103,6 +102,14 @@ const Nav = ({ whichLanguage, isEnglish, openMenu }) => {
 									className="nav__link link__hover--effect"
 								>
 									Services
+								</HashLink>
+							</li>
+							<li className="nav__links">
+								<HashLink
+									to="/#gallery"
+									className="nav__link link__hover--effect"
+								>
+									Gallery
 								</HashLink>
 							</li>
 

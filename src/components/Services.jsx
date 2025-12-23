@@ -2,8 +2,35 @@ import React from 'react';
 import ImgRes from '..//Assets/gallery7.JPG';
 import ImgCom from '..//Assets/gallery11.jpg';
 import ImgRep from '..//Assets/gallery9.JPG'
+import { useGSAP } from '@gsap/react';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/all';
+gsap.registerPlugin(ScrollTrigger);
 
 const Services = ({ isEnglish }) => {
+	useGSAP(() => {
+		const featuresAnimation = gsap.timeline({
+			scrollTrigger: {
+				trigger: '#services',
+				start: 'top 95%',
+				end: 'bottom 80%',
+				toggleActions: 'play none none none',
+				scrub: 3,
+			},
+		}); 
+		featuresAnimation.fromTo(
+			'.service__container',
+			{
+				x: '-50%',
+				opacity: 0,
+			},
+			{
+				x: '0%',
+				stagger: 0.5,
+				opacity: 1,
+			}
+		);
+	},[isEnglish])
 	return (
 		<section id="services">
 			<div className="container">
