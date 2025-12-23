@@ -12,6 +12,17 @@ const GalleryPage = ({ images, isEnglish }) => {
 		setIsOpen(true);
 	};
 
+	  useEffect(() => {
+			if (isOpen) {
+				document.body.style.overflow = 'hidden';
+			} else {
+				document.body.style.overflow = '';
+			}
+			return () => {
+				document.body.style.overflow = '';
+			};
+		}, [isOpen]);
+
 	useGSAP(() => {
 		gsap.fromTo('.image__container', {
 			opacity: 0
@@ -75,7 +86,22 @@ const GalleryPage = ({ images, isEnglish }) => {
 							className="lightbox-overlay"
 							onClick={closeLightbox}
 						>
-							<span className="close-btn">&times;</span>
+							<button
+								type="button"
+								className="close-btn"
+								onClick={(e) => {
+									e.stopPropagation();
+									closeLightbox();
+								}}
+								onTouchStart={(e) => {
+									e.stopPropagation();
+									e.preventDefault();
+									closeLightbox();
+								}}
+								aria-label="Close"
+							>
+								&times;
+							</button>
 							<img
 								src={images[currentIndex].src}
 								alt={images[currentIndex].alt}
@@ -84,20 +110,34 @@ const GalleryPage = ({ images, isEnglish }) => {
 								onClick={(e) => e.stopPropagation()}
 							/>
 							<button
+								type="button"
 								className="prev-btn"
 								onClick={(e) => {
 									e.stopPropagation();
 									prevImage();
 								}}
+								onTouchStart={(e) => {
+									e.stopPropagation();
+									e.preventDefault();
+									prevImage();
+								}}
+								aria-label="Previous image"
 							>
 								&#10094;
 							</button>
 							<button
+								type="button"
 								className="next-btn"
 								onClick={(e) => {
 									e.stopPropagation();
 									nextImage();
 								}}
+								onTouchStart={(e) => {
+									e.stopPropagation();
+									e.preventDefault();
+									nextImage();
+								}}
+								aria-label="Next image"
 							>
 								&#10095;
 							</button>
